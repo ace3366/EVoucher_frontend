@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { List, TicketPercent, ReceiptText } from "lucide-react";
+import goldenRose from "@/assets/Rose.ico";
 export default function SideBar({ className = "" }) {
   return (
     <aside
@@ -10,11 +11,7 @@ export default function SideBar({ className = "" }) {
       {/* Logo  */}
       <div className="p-5">
         <div className="flex justify-center">
-          <img
-            src="../../../public/icon/rose.ico"
-            className="size-10 inline-block"
-            alt=""
-          />
+          <img src={goldenRose} className="size-10 inline-block" alt="" />
         </div>
       </div>
       {/* Main menu */}

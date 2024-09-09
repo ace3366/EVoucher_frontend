@@ -20,6 +20,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
+import goldenRibbon from "@/assets/ribbon.ico";
 import { titleConvert } from "@/utils/stringUtils";
 import { useLocation } from "react-router-dom";
 
@@ -31,11 +32,7 @@ export default function Menu({ className = "" }) {
     <header className={`${className} flex justify-between p-4`}>
       {/* Left side */}
       <div className="font-handjet text-5xl">
-        <img
-          src="../../../public/icon/ribbon.ico"
-          className="size-10 inline pr-2"
-          alt=""
-        />
+        <img src={goldenRibbon} className="size-10 inline pr-2" alt="" />
         <span className="font-medium">E-Voucher</span>
         <ChevronRight className="inline size-12" />
         <span className="text-4xl">{title}</span>

@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-
 import Menu from "./Menu";
 import SideBar from "./SideBar";
+import evouSymbol from "@/assets/e.png";
 export default function Root() {
   return (
     <>
@@ -15,7 +15,7 @@ export default function Root() {
       </div>
       <footer>
         <div className="flex justify-center">
-          <img src="../../../public/icon/e.png" alt="" className="size-32" />
+          <img src={evouSymbol} alt="" className="size-32" />
         </div>
       </footer>
     </>
