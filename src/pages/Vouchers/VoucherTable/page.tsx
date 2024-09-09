@@ -8,7 +8,7 @@ export default function DemoPage() {
   useEffect(() => {
     async function fetchData() {
       const response = await fetch(
-        `${import.meta.env.VITE_API_URL}/VoucherSets?page=1&pageSize=10`
+        `${import.meta.env.VITE_API_URL}/Vouchers?page=1&pageSize=10`
       );
       const data = await response.json();
       const result = data.result;

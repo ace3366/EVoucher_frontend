@@ -8,8 +8,8 @@ export type VoucherSet = {
   name: string;
   code: string;
   quantity: number;
-  creation_time: string;
-  voucher_rule: number;
+  creationTime: string;
+  voucherSetRuleId: number;
 };
 
 export const columns: ColumnDef<VoucherSet>[] = [
@@ -36,17 +36,20 @@ export const columns: ColumnDef<VoucherSet>[] = [
     ),
   },
   {
-    accessorKey: "creation_time",
+    accessorKey: "creationTime",
     header: () => <div className="text-left">Creation time</div>,
-    cell: ({ row }) => (
-      <div className="text-left">{row.getValue("creation_time")}</div>
-    ),
+    cell: ({ row }) => {
+      const time: string = row.getValue("creationTime");
+      const convertedTime = new Date(time);
+      const formattedTime = convertedTime.toLocaleString();
+      return <div className="text-left">{formattedTime}</div>;
+    },
   },
   {
-    accessorKey: "voucher_rule",
+    accessorKey: "voucherSetRuleId",
     header: () => <div className="text-left">Voucher rule</div>,
     cell: ({ row }) => (
-      <div className="text-left">{row.getValue("voucher_rule")}</div>
+      <div className="text-left">{row.getValue("voucherSetRuleId")}</div>
     ),
   },
 ];

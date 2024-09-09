@@ -1,6 +1,10 @@
 import "./App.css";
 // Import lib
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Navigate,
+} from "react-router-dom";
 // Import pages
 import Home from "./pages/Home";
 import Root from "./pages/Root";
@@ -12,7 +16,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
-      { index: true, element: <Home /> },
+      { index: true, element: <Navigate to="/voucher-set" /> },
+      { path: "/voucher-set", element: <Home /> },
       { path: "/vouchers", element: <Vouchers /> },
       { path: "/voucher-set-rule", element: <VoucherSetRule /> },
     ],
